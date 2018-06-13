@@ -9,9 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Narazaka"]
   spec.email         = ["info@narazaka.net"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "find record by date from DB tables that is not indexed by date column"
+  spec.homepage      = "https://github.com/Narazaka/find_near_date"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
