@@ -1,8 +1,8 @@
 # FindNearDate
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/find_near_date`. To experiment with that code, run `bin/console` for an interactive prompt.
+find record by date from DB tables that is not indexed by date column (for ActiveRecord)
 
-TODO: Delete this and the text above, and describe your gem
+Caution: not for production app. for only human operation help.
 
 ## Installation
 
@@ -22,7 +22,31 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+app/models/foo.rb
+
+```ruby
+class Foo < ActiveRecord::Base
+end
+```
+
+lib/pry_helper.rb
+
+```ruby
+require "find_near_date"
+
+class Foo
+  extend FindNearDate
+end
+```
+
+in pry
+
+```
+> require "lib/pry_helper"
+> foo_10days_ago = Foo.find_near_date(10.days.ago, :updated_at, period: 1.day)
+```
+
+etc.
 
 ## Development
 
@@ -32,4 +56,8 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/find_near_date.
+Bug reports and pull requests are welcome on GitHub at https://github.com/Narazaka/find_near_date.
+
+## License
+
+This is released under the [Zlib License](https://narazaka.net/license/Zlib?2018)
