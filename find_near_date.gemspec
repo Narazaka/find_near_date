@@ -24,4 +24,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 2.1"
   spec.add_development_dependency "onkcop"
   spec.add_development_dependency "rake", "~> 13.0"
+  spec.add_development_dependency "rbs_rails", "~> 0.6"
+  spec.add_development_dependency "steep", "~> 0.39"
 end

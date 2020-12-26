@@ -1,0 +1,4 @@
+module FindNearDate[Model] : _ActiveRecord_Relation[Model]
+  def find_near_date: (Time | DateTime | ActiveSupport::TimeWithZone date, ?Symbol | String date_column, ?key_column: Symbol | String, ?period: Integer | Float, ?log: bool) -> ActiveRecord::Base
+  VERSION: String
+end

@@ -7,3 +7,6 @@
 /spec/reports/
 /tmp/
 Gemfile.lock
+
+sig/rbs_rails/
+vendor/
