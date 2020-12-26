@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+git clone git@github.com:ruby/gem_rbs.git vendor/rbs/gem_rbs
+bundle exec ruby -e 'require("pathname"); require("fileutils"); require("rbs_rails"); RbsRails.copy_signatures(to: "./sig/rbs_rails/")'
